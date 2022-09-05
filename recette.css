@@ -11,8 +11,8 @@ body {
 
 div.contenu {
     background-color: white;
-    padding: 30px;
-    margin: 0px 10% 80px 10%; /* high right bottom left*/
+    padding: 10px;
+    margin: 0px 2% 30px 2%; /* high right bottom left*/
     box-shadow: 0px 0px 10px 8px rgba(0, 0, 0, 0.2);
 }
 h1 {
@@ -58,20 +58,20 @@ table.info {
     position: absolute;
     bottom: 0px;
     width: 100%;
-    height: 80px;
+    height: 50px;
     background-color: #6C829DC0;
     color: white;
 }
 
-table.info td {
-    text-align: center;
-    font-size: 14px;
-    vertical-align: top;
-}
 table.info th {
-    font-size: 16px;
+    font-size: 14px;
     vertical-align: bottom;
     padding-bottom: 8px;
+}
+table.info td {
+    text-align: center;
+    font-size: 12px;
+    vertical-align: top;
 }
 
 img.info {
@@ -82,7 +82,7 @@ img.info {
 }
 
 div.colonne {
-    width: 45%;
+    width: 100%;
     margin-top: 20px;
 }
 div.colonne h2{
@@ -95,10 +95,6 @@ div.colonne h2{
 
 div.colonne1 {
     display: inline-block;
-
-}
-div.colonne2 {
-    float: right;
 }
 
 div.ingredients p {
@@ -144,3 +140,39 @@ table.preparation tr {
 * {
     overflow: auto;
 }
+
+/* Styles pour ordinateur : largeur min de 768px */
+@media only screen and (min-width: 760px) {
+    div.contenu {
+        padding: 30px;
+        margin: 0px 10% 80px 10%; /* high right bottom left*/
+        min-width: 350px;
+    }
+
+    table.info {
+        height: 80px;
+    }
+    table.info th {
+        font-size: 16px;
+    }
+    table.info td {
+        text-align: center;
+    }
+
+    /* --- */
+    div.colonne {
+        width: 45%;
+    }
+    div.colonne1 {
+        margin-right: 10%;
+    }
+    div.colonne2 {
+        float: right;
+    }
+  }
+
+  @media only screen and (min-width: 900px) {
+    div.contenu {
+        margin: auto;
+        max-width: 650px;
+    }
